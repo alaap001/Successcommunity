@@ -1,0 +1,30 @@
+// Place all the styles related to the progresses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "header";
+
+// this is the index file
+
+
+#main_div_index{
+margin: 0 100px 0 50px;
+}
+
+
+	#index_sidebar_aims{
+		margin-top: 20px; 
+	}
+
+#index_progress_image{
+	height: 300px;
+	padding: 10px;
+}
+
+#index_progress_image img{
+	height: 100%;
+	width: 100%;
+}
+// this is 

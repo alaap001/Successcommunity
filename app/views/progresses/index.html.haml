@@ -1,0 +1,26 @@
+#main_div_index.row.clearfix
+	#side_bar.col-md-2.col-sm-2.col-xs-2
+		-if user_signed_in?
+			.dp= image_tag current_user.profilepic
+			=link_to 'edit' , edit_user_registration_path
+		#index_sidebar_aims
+			%h4=link_to 'I have a new AIM' , new_aim_path
+			%br
+			%h4=link_to 'I made progress' , aims_path
+	#index_progress_div.col-md-6.col-xs-6.col-sm-6
+		=render 'progress'
+	#right_div.col-md-3.col-sm-3.col-xs-3
+		%h4 Top Stories
+		#top_story_div
+			%strong
+				%em= @posts.title
+			-if @posts.Postimage?
+				=link_to image_tag(@posts.Postimage.url) , @posts
+			%h5
+				%b
+					Posted by:
+					=link_to @posts.user.name , @posts.user
+#infinitescrolling.text-center
+	=will_paginate	@progress		
+
+

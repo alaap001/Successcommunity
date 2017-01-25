@@ -1,0 +1,9 @@
+<% if @progress.next_page %>
+$('#index_progress_div').append("<%= j render 'progress' %>");
+
+$('.pagination').replaceWith("<%= j will_paginate @progress %>");
+ 
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>

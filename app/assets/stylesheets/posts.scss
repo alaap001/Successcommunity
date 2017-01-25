@@ -1,0 +1,79 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// this is post index
+ 
+
+#index_profile_div{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #efefef;
+}
+#index_single_blog{
+	background: #fff;
+	margin: 10px;
+}
+#user_profile{
+width: 50px;
+height: 50px;
+margin-right: 20px;
+float:left;
+}
+#user_profile img{
+width: 50px;
+height: 50px;
+border-radius: 1em;
+float:left;
+}
+#user_name{
+	float: left;
+}
+#index_post_content{
+padding: 20px;
+margin-top: 10px; 
+
+}
+#index_post_content img{
+	height: 100%;
+	max-height: 650px;
+ width: 100%;
+}
+#index_post_aim {
+border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #efefef;
+
+	}
+#index_post_aim h4{
+	text-transform: capitalize;
+}
+
+// show page of posts
+
+.div{
+	background-color: #fff;
+	margin: 1px;
+ border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #efefef;
+}
+#title_div p{
+	text-transform: capitalize;
+}
+.profile img{
+	height: 60px;
+	width: 60px;
+	border-radius: 1em;
+}
+#image_div{
+	padding: 10px;
+}
+#image_div img{
+	height: 100%;
+	width: 100%;
+	max-height: 500px;
+}

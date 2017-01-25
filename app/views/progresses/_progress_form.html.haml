@@ -1,0 +1,10 @@
+= form_for ([@aim,@progress]) , html: {multipart: true} do |p|
+	=p.label :progress_title
+	=p.text_field :progress_head
+	=p.label :content
+	=p.text_area :content
+	=p.label :upload_images
+	=p.file_field :Progressimage
+	%br
+	=#image_tag(p.Progressimage) if p.Progressimage?
+	=p.submit

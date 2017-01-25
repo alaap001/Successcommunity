@@ -1,0 +1,5 @@
+#aims
+	-@aim.each do |aim|
+		%h2=link_to aim.head , aim
+		=	link_to 'Add Progress' , new_aim_progress_path(aim)
+		%br

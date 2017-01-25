@@ -1,0 +1,43 @@
+#content.container
+	#rowdiv.row
+		#sidebar.col-md-2.col-sm-2.col-xs-2
+			%h3= @user.name
+			#profilepic.dp
+				- if @user.profilepic?
+					= image_tag @user.profilepic 
+				-else
+					No profile Pic
+			= link_to @user.following.count.to_s + ' following'
+			= link_to @user.followers.count.to_s + ' follower' 
+			= render 'follow_form' if user_signed_in?
+		#show_user_aims.col-md-6.col-xs-6.col-sm-6
+			#index_progress_div
+			-@user.aims.each do |aim|
+				- aim.progresses.each do |p|
+					#index_single_progress
+						#index_progress_profile.clearfix
+							.progressdp=link_to image_tag(aim.user.profilepic) , aim.user 
+							.username
+								=link_to aim.user.name , aim.user
+								%p= time_ago_in_words(p.created_at)+' ago'
+						#index_progress_details	
+							#index_aim_head
+								%h4='AIM: '+aim.head
+							#index_progress_head
+								=link_to p.progress_head , aim_progress_path(aim,p)
+							#index_progress_content
+								%p=p.content
+							#index_comment_div
+								%h4= pluralize(p.progress_comments.count,"Comment")
+								- p.progress_comments.find_each do |c|
+									#single_comment_div
+										%p
+											=link_to image_tag(c.user.profilepic),c.user 
+											= link_to c.user.name+': ' , c.user
+											= c.content 
+											- if user_signed_in?
+												= link_to 'delete'
+												- if c.user.name == current_user.name
+													= link_to 'edit'
+								=link_to 'Add comment' , aim_progress_path(p.aim,p)
+						

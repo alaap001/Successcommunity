@@ -1,0 +1,66 @@
+#nav_div{
+	background-color: #000;
+	position: relative;
+	margin-bottom: 70px;
+ top: -28px;
+}
+
+#list_div{
+	float:right;
+	position:relative;
+	right: 30px;
+ top: 60px;
+}
+
+.logo img{
+position:relative;
+top: 41px;
+left: 50px;
+	height: 100px;
+	width: 185px;
+
+}
+
+#list_div ul li{
+	display:inline-block;
+	position:relative;
+	line-height:30px;
+	}
+
+#list_div ul li a{
+	display: block;
+	text-decoration:none;
+	text-align:center;
+	line-height:30px;
+	color:#fff;
+	width:100px;
+	}
+
+#list_div ul li:hover{
+	
+	}
+
+#list_div ul{
+	background-color:#000;
+	
+	}
+
+#list_div ul li ul{
+	position:absolute;
+	padding:0px;
+	visibility:hidden;
+	}
+
+#list_div ul li:hover ul{
+	visibility:visible;
+	}
+
+#logo_div{
+	float:left;
+	position: relative;
+}
+
+.image img{
+	height: 300px;
+width: 400px;
+}

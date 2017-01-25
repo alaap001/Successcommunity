@@ -1,0 +1,12 @@
+#aims
+	%h2=@aim.head
+	%p=@aim.content
+	%br
+	=	link_to 'Start' , new_aim_progress_path(@aim,@aim.progresses)
+	%br
+	%h1 Progress :
+	%h5
+		-	@aim.progresses.each do |progress|
+			=link_to progress.progress_head , aim_progress_path(@aim,progress)
+			%br
+		

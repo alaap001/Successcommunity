@@ -1,0 +1,42 @@
+#post_main_div.container
+	
+	#index_status_blog
+		-if user_signed_in?
+			%h3=link_to 'Add my own success story' , new_post_path	
+		%br
+		%br
+	#content
+		-@post.each do |post|
+			#index_single_blog
+				#index_profile_div.clearfix
+					#user_profile
+						=link_to image_tag (post.user.profilepic)
+					#user_name 
+						= link_to post.user.name, user_path(post.user_id)				
+						%p= time_ago_in_words(post.created_at)+' ago'			
+				#user_content.text-center
+					#index_post_aim
+						%h4=post.title
+					#index_post_content
+						-if post.Postimage?
+							=link_to image_tag(post.Postimage.url) , post.Postimage.url
+						%h5=link_to 'Read Blog' , post
+				#index_comment_div
+					%h5
+						=pluralize(post.comments.count,"Comment")
+						=pluralize(post.get_upvotes.size,"Like")
+					=link_to 'Like' , like_post_path(post),id: 'like',method: :get , remote: true
+					=link_to 'disLike' , dislike_post_path(post), method: :get , remote: true
+					-post.comments.find_each do |c|
+						#single_comment_div
+							=link_to image_tag(c.user.profilepic),c.user 
+							= link_to c.user.name+': ' , c.user
+							= c.content 
+							- if user_signed_in?
+								= link_to 'delete'
+								- if c.user.name == current_user.name
+									= link_to 'edit'
+					=link_to 'Add comment' , post_path(post)
+
+				
+		

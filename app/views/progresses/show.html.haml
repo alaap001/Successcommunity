@@ -1,0 +1,16 @@
+=link_to @aim.user.name , @aim.user
+%h2=@progress.progress_head
+%h5=@progress.content
+
+%h2.comment_conts= pluralize(@progress.progress_comments.count,"Comment")
+-	@comment.find_each do |c|
+	%p
+		=	c.user.name+': '
+		=	c.content 
+		-	if user_signed_in?
+			=	link_to 'delete',[c.progress.aim,c.progress,c], method: :delete
+			-	if c.user.name == current_user.name
+				= link_to 'edit'			
+
+=render 'progress_comments/form'
+=link_to 'home' , root_path

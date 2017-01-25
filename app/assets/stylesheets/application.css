@@ -1,0 +1,120 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.dp{
+	height: 100px;
+	
+}
+.dp img{
+		height: 100%;
+	width: 70%;
+}
+body{
+	background-color: #efefef; 
+}
+#side_bar{
+	
+}
+#right_div{
+	float: right;
+}
+#top_story_div{
+padding: 5px;
+	height: 300px;
+	
+
+}
+#show_user_posts{
+	float: left;
+	margin-left: 50px;
+}
+#index_progress_div{
+	float: left;
+	margin: 0px 0px 3px 0px;
+}
+#index_single_progress{
+background: #fff;
+margin: 30px 0px 30px 0;
+
+}
+
+#index_progress_profile{
+	border-radius: 1em;
+	border-bottom-color: #efefef;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.progressdp{
+	float: left;
+	height: 50px;
+	border-radius: 1em;
+	width: 50px;
+	margin-right: 10px; 
+}
+.username{
+	float: left;
+}
+.username p{
+font-size: 11px;
+color: #000;
+}
+.username a{
+	font-size: 18px;
+}
+.progressdp img{
+		height:50px;
+	width: 50px;
+border-radius: 1em;
+}
+
+#index_aim_head{
+
+	padding: 2px;
+
+}
+
+#index_profile_details{
+
+}
+#index_progress_head{
+
+	padding: 2px;
+}
+#index_progress_content{
+
+	padding: 5px;
+}
+#index_comment_div{
+	background: #feeeff;
+	border-top-color: #efefef;
+	border-top-style: solid;
+	padding: 5px;
+	border-top-width: 3px;
+}
+#single_comment_div{
+	border-top-color: #efefef;
+	border-top-style: solid;
+	padding: 5px;
+	border-top-width: 2px;
+}
+#single_comment_div img{
+height: 30px;
+width: 30px;
+}
+
+#top_story_div img{
+height: 100%;
+width: 100%;
+}
